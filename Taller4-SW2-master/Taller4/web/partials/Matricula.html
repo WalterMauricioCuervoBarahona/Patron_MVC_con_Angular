@@ -1,0 +1,78 @@
+<div class="btn-group">
+    <button type="button" class="btn btn-default" ng-click="nuevo()">Nuevo Matrícula</button>
+    <button type="button" class="btn btn-default" ng-click="cancelar()">Listar Matrícula</button>
+</div>
+
+<div class="panel panel-primary" ng-hide="panelEditar">
+    <div class="panel-heading">Parametrizaci&oacute;n de Matrícula</div>
+    <div class="panel-body">
+        <table class="resultados table table-striped">
+            <tr>
+                <th>
+                    Año
+                </th>
+                <th>
+                    Semestre
+                </th>
+                <th>
+                    Estudiante
+                </th>
+                <th>
+                    Matería
+                </th>
+                <th>
+                    &nbsp;       &nbsp;
+                </th>
+            </tr>
+            <tr ng-repeat="row in lista">
+                <td class="row">{{row.año}}</td>
+                <td class="row">{{row.semestre}}</td>
+                <td class="row">{{row.estudiante.nombre}}</td>
+                <td class="row">{{row.materia.nombre}}</td>
+                <td class="row">
+                    <button type="button" class="btn btn-default" ng-click="editar(row)">
+                        <span class="glyphicon glyphicon-pencil"></span>Editar
+                    </button>
+                    <button type="button" class="btn btn-default" ng-click="eliminar(row)">
+                        <span class="glyphicon glyphicon-remove"></span>Eliminar
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <br/>
+    </div>
+</div>
+
+<div class="panel panel-primary" ng-show="panelEditar">
+    <div class="panel-heading">Parametrizaci&oacute;n de Matrícula</div>
+    <div class="panel-body">
+        <form role="form" id="formularioEditar">
+            <div class="row">
+                <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
+                    <label>Año</label>
+                    <input id="año"
+                           class="form-control" 
+                           type="text"
+                           ng-model="datosFormulario.año"
+                           placeholder="año"/>
+                    <div ng-show="errores.año">{{errores.año}}</div>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                    <label>Semestre</label>
+                    <select id="semestre" class="form-control"
+                            ng-model="datosFormulario.semestre"
+                            ng-options="option.nombre for option in listaFacultad track by option.id">
+                    </select>
+                    <div ng-show="errores.semestre">{{errores.semestre}}</div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default" ng-click="guardar()">Aceptar</button>
+                <button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

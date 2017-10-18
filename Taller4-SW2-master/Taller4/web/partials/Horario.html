@@ -1,0 +1,98 @@
+<div class="btn-group">
+    <button type="button" class="btn btn-default" ng-click="nuevo()">Nuevo Horario</button>
+    <button type="button" class="btn btn-default" ng-click="cancelar()">Listar Horario</button>
+</div>
+
+<div class="panel panel-primary" ng-hide="panelEditar">
+    <div class="panel-heading">Parametrizaci&oacute;n de Horario</div>
+    <div class="panel-body">
+        <table class="resultados table table-striped">
+            <tr>
+                <th>
+                    Día de la semana
+                </th>
+                <th>
+                    Hora inicio
+                </th>
+                <th>
+                    Hora fin
+                </th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr ng-repeat="row in lista">
+                <td class="row">{{row.dia}}</td>
+                <td class="row">{{row.horaI | date:"HH:mm"}}</td>
+                <td class="row">{{row.horaF | date:"HH:mm"}}</td>
+                <td class="row">
+                    <button type="button" class="btn btn-default" ng-click="editar(row)">
+                        <span class="glyphicon glyphicon-pencil"></span>Editar
+                    </button>
+                    <button type="button" class="btn btn-default" ng-click="eliminar(row)">
+                        <span class="glyphicon glyphicon-remove"></span>Eliminar
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <br/>
+    </div>
+</div>
+
+<div class="panel panel-primary" ng-show="panelEditar">
+    <div class="panel-heading">Parametrizaci&oacute;n de Horario</div>
+    <div class="panel-body">
+        <form role="form" id="formularioEditar">
+            <div class="row">
+                <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
+                    <label>dia</label>
+                    <select id="dia" ng-model="datosFormulario.dia"
+                            placeholder="dia">
+                        <option value="Lunes">Lunes</option>
+                        <option value="Martes">Martes</option>
+                        <option value="Miercoles">Miercoles</option>
+                        <option value="Jueves">Jueves</option>
+                        <option value="Viernes">Viernes</option>
+                        <option value="Sabado">Sabado</option>
+                        <option value="Domingo">Domingo</option>
+                    </select>
+                    <div ng-show="errores.dia">{{errores.dia}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                    <div layout-gt-xs="row">
+                        <div flex-gt-xs>
+                            <label>Hora inicio</label>
+                            <input id="horaI"
+                                   type="time"
+                                   class="form-control"
+                                   ng-model="datosFormulario.horaI"
+                                   placeholder="horaI"/>
+                            <div ng-show="errores.horaI">{{errores.horaI}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                        <div layout-gt-xs="row">
+                            <div flex-gt-xs>
+                                <label for="horaF">Hora Fin</label>
+                                <input id="horaF"
+                                       class="form-control"
+                                       type="time"
+                                       ng-model="datosFormulario.horaF"
+                                       placeholder="horaF"/>
+                                <div ng-show="errores.horaF">{{errores.horaF}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" ng-click="guardar()">Aceptar</button>
+                    <button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
+                </div>
+        </form>
+    </div>
+</div>
+
