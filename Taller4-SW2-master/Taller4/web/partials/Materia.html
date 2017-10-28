@@ -4,7 +4,7 @@
 </div>
 
 <div class="panel panel-primary" ng-hide="panelEditar">
-    <div class="panel-heading">Parametrizaci&oacute;n de Carrera</div>
+    <div class="panel-heading">Parametrizaci&oacute;n de Materia</div>
     <div class="panel-body">
         <table class="resultados table table-striped">
             <tr>
@@ -32,7 +32,8 @@
                 <td class="row">{{row.creditos}}</td>
                 <td class="row">{{row.carrera.nombre}}</td>
                 <td class="row">{{row.profesor.nombre}}</td>
-                <td class="row">{{row.horario.horaI}}</td>
+
+                <td class="row">{{row.horario}}</td>
 
                 <td class="row">
                     <button type="button" class="btn btn-default" ng-click="editar(row)">
@@ -49,25 +50,25 @@
 </div>
 
 <div class="panel panel-primary" ng-show="panelEditar">
-    <div class="panel-heading">Parametrizaci&oacute;n de Carrera</div>
+    <div class="panel-heading">Parametrizaci&oacute;n de Materia</div>
     <div class="panel-body">
         <form role="form" id="formularioEditar">
             <div class="row">
                 <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
                     <label for="nombre">nombre</label>
-                    <input id="nombre" 
-                           class="form-control" 
+                    <input id="nombre"
+                           class="form-control"
                            type="text"
                            ng-model="datosFormulario.nombre"
                            placeholder="nombre"/>
                     <div ng-show="errores.nombre">{{errores.nombre}}</div>
                 </div>
-            </div> 
+            </div>
             <div class="row">
                 <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
                     <label>creditos</label>
                     <input id="creditos"
-                           class="form-control" 
+                           class="form-control"
 
                            ng-model="datosFormulario.creditos"
                            placeholder="nombre"/>
@@ -94,16 +95,32 @@
                     <div ng-show="errores.profesor">{{errores.profesor}}</div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                    <label>Hora inicio</label>
-                    <select id="horaI" class="form-control"
-                            ng-model="datosFormulario.horaI"
-                            ng-options="option.horaI for option in listaHorario track by option.id">
-                    </select>
-                    <div ng-show="errores.horaI">{{errores.horaI}}</div>
+                <div class="form-group col-md-6" ng-class="errores.horario ? 'error' : ''">
+                    <table class="table">
+                        <thead>
+                        <tr>dia</tr>
+                        <tr>Hora Inicio</tr>
+                        <tr>Hora Fin</tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="horario in datosFormulario.horarios">
+                            <td>{{horario.dia}}</td>
+                            <td>{{horario.horaInicio}}</td>
+                            <td>{{horario.horaFin}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div ng-show="errores.horario">{{errores.horario}}</div>
                 </div>
             </div>
+
+
+            <!--HORARIO-->
+
+            <!--cierre HORARIO-->
+
             <div class="btn-group">
                 <button type="button" class="btn btn-default" ng-click="guardar()">Aceptar</button>
                 <button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
@@ -112,3 +129,77 @@
     </div>
 </div>
 
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Crear horario</button>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Datos Horario</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
+                            <label>dia</label>
+                            <select id="dia" ng-model="datosHorario.dia"
+                                    placeholder="dia">
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miercoles">Miercoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sabado">Sabado</option>
+                                <option value="Domingo">Domingo</option>
+                            </select>
+                            <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                            <div layout-gt-xs="row">
+                                <div flex-gt-xs>
+                                    <label>Hora inicio</label>
+                                    <input id="horaInicio"
+                                           type="time"
+                                           class="form-control"
+                                           ng-model="datosHorario.horaInicio"
+                                           placeholder="horarios"/>
+                                    <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                            <div layout-gt-xs="row">
+                                <div flex-gt-xs>
+                                    <label for="horaFin">Hora Fin</label>
+                                    <input id="horaFin"
+                                           class="form-control"
+                                           type="time"
+                                           ng-model="datosHorario.horaFin"
+                                           placeholder="horaFin"/>
+                                    <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" ng-click="guardarHorario()">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>

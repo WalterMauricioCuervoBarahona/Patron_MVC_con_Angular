@@ -7,12 +7,13 @@ module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope
         $scope.panelEditar = false;
         $scope.listaCarrera = carreras;
         $scope.listaProfesor = profesores;
-    $scope.listaHorario = horarios;
+
 
         //guardar
         $scope.nuevo = function () {
             $scope.panelEditar = true;
-            $scope.datosFormulario = {};
+            $scope.datosFormulario = {horarios:[]};
+
         };
 
         $scope.guardar = function () {
@@ -27,6 +28,19 @@ module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope
             $scope.panelEditar = false;
             $scope.datosFormulario = {};
         };
+
+        //modal
+    $scope.CrearHorario = function () {
+        $('myModal').modal();
+        $scope.datosHorario={};
+    };
+
+    //guardar Horario del modal
+    $scope.guardarHorario = function () {
+        $scope.datosFormulario.horarios.push($scope.datosHorario);
+        $('#myModal').modal('hide');
+        $scope.datosHorario={};
+    };
 
         //editar
         $scope.editar = function (data) {

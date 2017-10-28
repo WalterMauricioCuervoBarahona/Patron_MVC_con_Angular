@@ -25,17 +25,12 @@ var profesores=[
 
 var idMateria=2;
 var materias=[
-    {"id":1, "nombre":"Software II", "creditos":"4"}
+    {"id":1, "nombre":"Software II", "creditos":"4", horarios:[{"dia":"Lunes","horaInicio":"10:30:am", "horaFin":"8"},{"dia":"Lunes","horaInicio":"10", "horaFin":"8"}]}
 ];
 
 var idEstudiante=2;
 var estudiantes=[
     {"id":1, "nombre":"Diego", "apellido":"Torres", "codigo":"6265698", "documento":"77777777"}
-];
-
-var idHorario = 4;
-var horarios=[
-
 ];
 
 var idMatricula = 4;
