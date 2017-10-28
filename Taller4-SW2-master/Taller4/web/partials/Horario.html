@@ -21,8 +21,8 @@
             </tr>
             <tr ng-repeat="row in lista">
                 <td class="row">{{row.dia}}</td>
-                <td class="row">{{row.horaI | date:"HH:mm"}}</td>
-                <td class="row">{{row.horaF | date:"HH:mm"}}</td>
+                <td class="row">{{row.horaI | date:'HH:MM:SSZ'}}</td>
+                <td class="row">{{row.horaF | date:'HH:MM:SSZ'}}</td>
                 <td class="row">
                     <button type="button" class="btn btn-default" ng-click="editar(row)">
                         <span class="glyphicon glyphicon-pencil"></span>Editar

@@ -98,12 +98,13 @@
 
             <div class="row">
                 <div class="form-group col-md-6" ng-class="errores.horario ? 'error' : ''">
+
                     <table class="table">
-                        <thead>
-                        <tr>dia</tr>
-                        <tr>Hora Inicio</tr>
-                        <tr>Hora Fin</tr>
-                        </thead>
+                        <tr>
+                        <th>dia</th>
+                        <th>Hora Inicio</th>
+                        <th>Hora Fin</th>
+                        </tr>
                         <tbody>
                         <tr ng-repeat="horario in datosFormulario.horarios">
                             <td>{{horario.dia}}</td>
@@ -127,79 +128,80 @@
             </div>
         </form>
     </div>
-</div>
 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Crear horario</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Crear horario</button>
 
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Datos Horario</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form">
-                    <div class="row">
-                        <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
-                            <label>dia</label>
-                            <select id="dia" ng-model="datosHorario.dia"
-                                    placeholder="dia">
-                                <option value="Lunes">Lunes</option>
-                                <option value="Martes">Martes</option>
-                                <option value="Miercoles">Miercoles</option>
-                                <option value="Jueves">Jueves</option>
-                                <option value="Viernes">Viernes</option>
-                                <option value="Sabado">Sabado</option>
-                                <option value="Domingo">Domingo</option>
-                            </select>
-                            <div ng-show="errores.horarios">{{errores.horarios}}</div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Datos Horario</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
+                                <label>dia</label>
+                                <select id="dia" ng-model="datosHorario.dia"
+                                        placeholder="dia">
+                                    <option value="Lunes">Lunes</option>
+                                    <option value="Martes">Martes</option>
+                                    <option value="Miercoles">Miercoles</option>
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                    <option value="Sabado">Sabado</option>
+                                    <option value="Domingo">Domingo</option>
+                                </select>
+                                <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                            <div layout-gt-xs="row">
-                                <div flex-gt-xs>
-                                    <label>Hora inicio</label>
-                                    <input id="horaInicio"
-                                           type="time"
-                                           class="form-control"
-                                           ng-model="datosHorario.horaInicio"
-                                           placeholder="horarios"/>
-                                    <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                        <div class="row">
+                            <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                                <div layout-gt-xs="row">
+                                    <div flex-gt-xs>
+                                        <label>Hora inicio</label>
+                                        <input id="horaInicio"
+                                               type="time"
+                                               class="form-control"
+                                               ng-model="datosHorario.horaInicio"
+                                               placeholder="horarios"/>
+                                        <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                            <div layout-gt-xs="row">
-                                <div flex-gt-xs>
-                                    <label for="horaFin">Hora Fin</label>
-                                    <input id="horaFin"
-                                           class="form-control"
-                                           type="time"
-                                           ng-model="datosHorario.horaFin"
-                                           placeholder="horaFin"/>
-                                    <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                        <div class="row">
+                            <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                                <div layout-gt-xs="row">
+                                    <div flex-gt-xs>
+                                        <label for="horaFin">Hora Fin</label>
+                                        <input id="horaFin"
+                                               class="form-control"
+                                               type="time"
+                                               ng-model="datosHorario.horaFin"
+                                               placeholder="horaFin"/>
+                                        <div ng-show="errores.horarios">{{errores.horarios}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default" ng-click="guardarHorario()">Aceptar</button>
-                    </div>
-                </form>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default" ng-click="guardarHorario()">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
-            </div>
+
         </div>
-
     </div>
+
 </div>

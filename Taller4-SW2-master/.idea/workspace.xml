@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Taller4/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="42" column="82" lean-forward="false" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
+            <state relative-caret-position="375">
+              <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -34,26 +34,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Materia.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Materia.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3145">
-              <caret line="185" column="73" lean-forward="false" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
-              <folding>
-                <element signature="e#846#852#0" expanded="true" />
-                <element signature="e#1842#1850#0" expanded="true" />
-                <element signature="e#5648#5655#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MateriaController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Taller4/web/js/MateriaController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="246">
               <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Horario.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Horario.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Estudiante.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Estudiante.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="57" column="63" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Materia.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Materia.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-30">
+              <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+              <folding>
+                <element signature="e#846#852#0" expanded="true" />
+                <element signature="e#1842#1850#0" expanded="true" />
+                <element signature="e#5668#5675#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,11 +95,11 @@
         <option value="$PROJECT_DIR$/Taller4/web/js/MatriculaController.js" />
         <option value="$PROJECT_DIR$/Taller4/web/partials/Matricula.html" />
         <option value="$PROJECT_DIR$/Taller4/web/js/RouteProvider.js" />
-        <option value="$PROJECT_DIR$/Taller4/web/partials/Horario.html" />
         <option value="$PROJECT_DIR$/Taller4/web/js/MateriaController.js" />
         <option value="$PROJECT_DIR$/Taller4/web/index.html" />
         <option value="$PROJECT_DIR$/Taller4/web/js/Modelo.js" />
         <option value="$PROJECT_DIR$/Taller4/web/partials/Materia.html" />
+        <option value="$PROJECT_DIR$/Taller4/web/partials/Horario.html" />
       </list>
     </option>
   </component>
@@ -117,6 +137,31 @@
             <path>
               <item name="Taller4-SW2-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller4-SW2-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taller4-SW2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller4-SW2-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Taller4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taller4-SW2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller4-SW2-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Taller4" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taller4-SW2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller4-SW2-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Taller4" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taller4-SW2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller4-SW2-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Taller4" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -191,16 +236,15 @@
       <workItem from="1508358193173" duration="8010000" />
       <workItem from="1508706774019" duration="695000" />
       <workItem from="1508707694946" duration="1068000" />
-      <workItem from="1509148938827" duration="664000" />
+      <workItem from="1509148938827" duration="3756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45984000" />
+    <option name="totallyTimeSpent" value="49076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -468,6 +512,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -528,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Estudiante.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="57" column="63" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Taller4/web/js/MatriculaController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -571,22 +609,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Horario.html">
+    <entry file="file://$PROJECT_DIR$/Taller4/web/js/MateriaController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="91" column="90" lean-forward="false" selection-start-line="91" selection-start-column="76" selection-end-line="91" selection-end-column="90" />
+        <state relative-caret-position="246">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Materia.html">
+    <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Estudiante.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="73" lean-forward="false" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
-          <folding>
-            <element signature="e#846#852#0" expanded="true" />
-            <element signature="e#1842#1850#0" expanded="true" />
-            <element signature="e#5648#5655#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="457">
+          <caret line="57" column="63" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -598,18 +633,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Taller4/web/js/MateriaController.js">
+    <entry file="file://$PROJECT_DIR$/Taller4/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        <state relative-caret-position="375">
+          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Taller4/web/index.html">
+    <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Materia.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="42" column="82" lean-forward="false" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
+        <state relative-caret-position="-30">
+          <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+          <folding>
+            <element signature="e#846#852#0" expanded="true" />
+            <element signature="e#1842#1850#0" expanded="true" />
+            <element signature="e#5668#5675#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Taller4/web/partials/Horario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
           <folding />
         </state>
       </provider>
